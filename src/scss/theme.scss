@@ -1,12 +1,4 @@
-body {
-  .main-image {
-    width: 100%;
+@import 'variables';
+@import 'base';
 
-    position: absolute;
-    z-index: -9;
-  }
-
-  svg:not(:root) {
-    overflow: visible;
-  }
-}
+@import 'content';
