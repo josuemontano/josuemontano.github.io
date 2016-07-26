@@ -10,9 +10,13 @@
 </head>
 <body>
   <img src="dist/img/render_001.png" class="main-image">
-  <svg width='100%' height='500px'></svg>
+  <svg width='100%' height='auto'></svg>
 
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="dist/regional_convention.min.js"></script>
+  <script>
+    var svg = d3.select('svg');
+    new RCPlotter(svg).plotData();
+  </script>
 </body>
 </html>
