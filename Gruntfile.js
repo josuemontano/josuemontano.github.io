@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                         '\n * @version <%= pkg.version %>' +
                         '\n * @date <%= grunt.template.today("dd-mm-yyyy") %>' +
                         '\n**/\n',
-                    transform: ['coffeeify', 'hbsfy'],
+                    transform: ['coffeeify', 'hbsfy', 'uglifyify'],
                 }
             },
         },
