@@ -6,11 +6,6 @@ body {
     z-index: -9;
   }
 
-  .tooltip {
-    position: absolute;
-    padding: $base-size;
-  }
-
   svg:not(:root) {
     overflow: visible;
   }

@@ -5,8 +5,6 @@ class Point
     @attrs.stroke = '#0191AF' if !@attrs.stroke?
 
   draw: ->
-    tooltip = @drawTooltip()
-
     @svg.append('circle')
       .attr('cx', @attrs.x)
       .attr('cy', @attrs.y)
@@ -16,21 +14,7 @@ class Point
       .attr('stroke', @attrs.stroke)
       .attr('stroke-width', 2)
 
-      .on('mouseover', (d) ->
-        tooltip.transition()
-              .duration(200)
-              .style('opacity', 1)
-      ).on('mouseout', (d) ->
-        tooltip.transition()
-              .duration(500)
-              .style('opacity', 0)
-      )
-
-  drawTooltip: ->
-    tooltip = d3.select('body').append('div')
-    tooltip.html @attrs.title
-    tooltip.attr 'class', 'tooltip'
-    tooltip
+      .append('title').text (d) => @attrs.title
 
 
 module.exports = Point
