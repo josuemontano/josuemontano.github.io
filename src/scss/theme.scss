@@ -5,4 +5,8 @@ body {
     position: absolute;
     z-index: -9;
   }
+
+  svg:not(:root) {
+    overflow: visible;
+  }
 }
