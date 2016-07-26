@@ -19,13 +19,18 @@ module.exports = function (grunt) {
         browserify: {
             dist: {
                 files: {
-                    'static/<%= pkg.name %>.js': ['src/js/app/**/*.coffee'],
+                    'dist/<%= pkg.name %>.min.js': ['src/js/app/**/*.coffee'],
                 },
                 options: {
                     browserifyOptions: {
                         debug: true,
                         extensions: ['.coffee', '.hbs']
                     },
+                    banner: '/**' +
+                        '\n * <%= pkg.name %>' +
+                        '\n * @version <%= pkg.version %>' +
+                        '\n * @date <%= grunt.template.today("dd-mm-yyyy") %>' +
+                        '\n**/\n',
                     transform: ['coffeeify', 'hbsfy'],
                 }
             },
@@ -40,13 +45,13 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'src/scss',
                     src: ['*.scss'],
-                    dest: 'static',
+                    dest: 'dist',
                     ext: '.min.css'
                 }, {
                     expand: true,
                     cwd: 'bower_components/foundation/scss',
                     src: ['*.scss'],
-                    dest: 'static',
+                    dest: 'dist',
                     ext: '.min.css'
                 }]
             }
@@ -55,22 +60,8 @@ module.exports = function (grunt) {
             files: {
                 cwd: 'src/img',
                 src: '**/*',
-                dest: 'static/img',
+                dest: 'dist/img',
                 expand: true
-            }
-        },
-        uglify: {
-            options: {
-                banner: '/**' +
-                        '\n * <%= pkg.name %>' +
-                        '\n * @version <%= pkg.version %>' +
-                        '\n * @date <%= grunt.template.today("dd-mm-yyyy") %>' +
-                        '\n**/\n'
-            },
-            dist: {
-                files: {
-                    'static/<%= pkg.name %>.min.js': ['static/<%= pkg.name %>.js']
-                }
             }
         },
         coffeelint: {
@@ -92,6 +83,5 @@ module.exports = function (grunt) {
         'sass',
         'coffeelint',
         'browserify',
-        'uglify'
     ]);
 };
