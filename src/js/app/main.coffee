@@ -12,11 +12,10 @@ class Main
       {x: 490, y: 220, title: 'Primeros Auxilios'}
       {x: 540, y: 100, title: 'Transporte y materiales'}
       {x: 335, y: 100, title: 'Lactancia'}
-      {x: 220, y: 850, title: 'Presidencia'}
+      {x: 220, y: 860, title: 'Presidencia'}
       {x: 220, y: 500, title: 'Plataforma'}
-      # {x: 335, y: 750, title: ''}
-      # {x: 550, y: 750, title: ''}
-      # {x: 545, y: 900, title: ''}
+      {x: 940, y: 360, title: 'Información'}
+      {x: 940, y: 640, title: 'Estacionamiento 1'}
     ]
 
   plotData: ->

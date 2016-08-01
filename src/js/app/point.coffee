@@ -1,6 +1,6 @@
 class Point
   constructor: (@svg, @attrs) ->
-    @attrs.r = 5 if !@attrs.r?
+    @attrs.r = 6 if !@attrs.r?
     @attrs.fill = '#5BCEE0' if !@attrs.fill?
     @attrs.stroke = '#0191AF' if !@attrs.stroke?
 
