@@ -1,20 +1,40 @@
 .d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
+  padding: $base-size / 2;
+  border-radius: 3px;
+
+  background: black;
   color: #fff;
-  border-radius: 2px;
+  font-weight: bold;
+
   pointer-events: none;
 
-  &:after {
-    box-sizing: border-box;
-    display: inline;
-    font-size: 10px;
-    width: 100%;
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.8);
+  &:before {
     position: absolute;
-    pointer-events: none;
+    left: $base-size;
+    top: auto;
+    right: auto;
+    bottom: -.3 * $base-size;
+
+    content: '';
+    width: .7 * $base-size;
+    height: .7 * $base-size;
+    background: black;
+
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 2;
+  }
+
+  &.n {
+    transform-origin: center bottom;
+
+    &:before {
+      top: auto;
+      right: auto;
+      bottom: -.3 * $base-size;
+      left: 50%;
+      margin-left: -.3 * $base-size;
+    }
   }
 }
