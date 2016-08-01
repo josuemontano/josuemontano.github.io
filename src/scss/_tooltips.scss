@@ -1,40 +1,12 @@
-.d3-tip {
-  padding: $base-size / 2;
-  border-radius: 3px;
-
-  background: black;
-  color: #fff;
-  font-weight: bold;
-
+.tooltip {
+  font-family: 'Lato';
   pointer-events: none;
 
-  &:before {
-    position: absolute;
-    left: $base-size;
-    top: auto;
-    right: auto;
-    bottom: -.3 * $base-size;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 
-    content: '';
-    width: .7 * $base-size;
-    height: .7 * $base-size;
-    background: black;
-
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    z-index: 2;
-  }
-
-  &.n {
-    transform-origin: center bottom;
-
-    &:before {
-      top: auto;
-      right: auto;
-      bottom: -.3 * $base-size;
-      left: 50%;
-      margin-left: -.3 * $base-size;
-    }
-  }
+  background: white;
+  padding: $base-size;
+  color: black;
 }
