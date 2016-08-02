@@ -4,18 +4,19 @@ Point = require('./point')
 class Main
   constructor: (@svg) ->
     @data = [
-      {x: 800, y: 390, title: 'Acomodadores'}
-      {x: 820, y: 565, title: 'Objetos perdidos y guardarropía'}
-      {x: 800, y: 610, title: 'Objetos perdidos y guardarropía'}
-      {x: 830, y: 520, title: 'Alojamiento'}
-      {x: 830, y: 475, title: 'Prensa'}
-      {x: 490, y: 220, title: 'Primeros Auxilios'}
-      {x: 540, y: 100, title: 'Transporte y materiales'}
-      {x: 335, y: 100, title: 'Lactancia'}
-      {x: 220, y: 860, title: 'Presidencia'}
-      {x: 220, y: 500, title: 'Plataforma'}
-      {x: 940, y: 360, title: 'Información'}
-      {x: 940, y: 640, title: 'Estacionamiento 1'}
+      {x: 1050, y: 490, title: 'Acomodadores'}
+      {x: 1080, y: 580, title: 'Prensa'}
+      {x: 1080, y: 625, title: 'Alojamiento'}
+      {x: 1070, y: 670, title: 'Objetos perdidos y guardarropía'}
+      {x: 1050, y: 715, title: 'Objetos perdidos y guardarropía'}
+      {x: 1200, y: 460, title: 'Información'}
+      {x: 1200, y: 750, title: 'Estacionamiento 1'}
+      {x: 820, y: 200, title: 'Transporte y materiales'}
+      {x: 610, y: 190, title: 'Lactancia'}
+      {x: 740, y: 315, title: 'Primeros Auxilios'}
+      {x: 660, y: 340, title: 'Bautismo'}
+      {x: 410, y: 960, title: 'Presidencia'}
+      {x: 420, y: 600, title: 'Plataforma'}
     ]
 
   plotData: ->
