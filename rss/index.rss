@@ -1,24 +1,10 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>A dev's thoughts</title><description>Thoughts and experiences on development.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 19 Apr 2017 13:24:14 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Portfolio</title><description>&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
-&lt;small&gt;"Codex on the Flight of Birds" | Rendered with Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>A dev's thoughts</title><description>Thoughts and experiences on development.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 19 Apr 2017 13:45:04 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Portafolio</title><description>&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
+&lt;small&gt;"Codex on the Flight of Birds" | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
-&lt;small&gt;Polideportivo Héroes de Octubre, La Paz | Rendered with Cycles Render Engine, edited with Pixelmator&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;video width="100%" height="450" controls autoplay&gt;  
-  &lt;source src="http://res.cloudinary.com/doonzvkyt/video/upload/v1492603549/spot_cyoxgx.mp4" type="video/mp4"&gt;
-&lt;/video&gt;  
-
-&lt;p&gt;&lt;small&gt;Publicity Spot | Rendered with Cycles Render Engine, edited with Final Cut Pro X and Audacity&lt;/small&gt;&lt;/p&gt;</description><link>http://localhost:2368/3d-portfolio/</link><guid isPermaLink="false">f5027057-58bf-4fd3-b3a9-1acadea55931</guid><category>3d rendering</category><dc:creator>Josue Montano</dc:creator><pubDate>Wed, 19 Apr 2017 11:57:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
-&lt;small&gt;"Codex on the Flight of Birds" | Rendered with Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
-&lt;small&gt;Polideportivo Héroes de Octubre, La Paz | Rendered with Cycles Render Engine, edited with Pixelmator&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492608958/Final_render_t9p3zu.png" alt="Boeing 787"&gt;
+&lt;small&gt;Boeing 787 | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -26,4 +12,28 @@
   &lt;source src="http://res.cloudinary.com/doonzvkyt/video/upload/v1492603549/spot_cyoxgx.mp4" type="video/mp4"&gt;
 &lt;/video&gt;  
 
-&lt;p&gt;&lt;small&gt;Publicity Spot | Rendered with Cycles Render Engine, edited with Final Cut Pro X and Audacity&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;small&gt;Spot Publicitario | Renderizado con Cycles Render Engine, editado con Final Cut Pro X &amp;amp; Audacity&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
+&lt;small&gt;Esquema del Polideportivo Héroes de Octubre, La Paz | Renderizado con Cycles Render Engine, editado&lt;/small&gt;&lt;/p&gt;</description><link>http://localhost:2368/3d-portfolio/</link><guid isPermaLink="false">f5027057-58bf-4fd3-b3a9-1acadea55931</guid><category>3d rendering</category><dc:creator>Josue Montano</dc:creator><pubDate>Wed, 19 Apr 2017 11:57:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
+&lt;small&gt;"Codex on the Flight of Birds" | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492608958/Final_render_t9p3zu.png" alt="Boeing 787"&gt;
+&lt;small&gt;Boeing 787 | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;video width="100%" height="450" controls autoplay&gt;  
+  &lt;source src="http://res.cloudinary.com/doonzvkyt/video/upload/v1492603549/spot_cyoxgx.mp4" type="video/mp4"&gt;
+&lt;/video&gt;  
+
+&lt;p&gt;&lt;small&gt;Spot Publicitario | Renderizado con Cycles Render Engine, editado con Final Cut Pro X &amp;amp; Audacity&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
+&lt;small&gt;Esquema del Polideportivo Héroes de Octubre, La Paz | Renderizado con Cycles Render Engine, editado con Pixelmator&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
