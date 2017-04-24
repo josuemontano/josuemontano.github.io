@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Josue Montano's blog</title><description>Development, maths and 3D</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 19 Apr 2017 14:07:25 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Portafolio 3D</title><description>&lt;p&gt;Los trabajos siguientes fueron modelados en &lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;, el motor de renderizado utilizado se indica por separado.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Josue Montano's blog</title><description>Development, maths and 3D</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 24 Apr 2017 13:46:37 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Portafolio 3D</title><description>&lt;p&gt;Los trabajos siguientes fueron modelados en &lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;, el motor de renderizado utilizado se indica por separado.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
 &lt;small&gt;"Codex on the Flight of Birds" | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
@@ -35,4 +35,9 @@
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
-&lt;small&gt;Esquema del Polideportivo Héroes de Octubre, La Paz | Renderizado con Cycles Render Engine, editado con Pixelmator&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;small&gt;Esquema del Polideportivo Héroes de Octubre, La Paz | Renderizado con Cycles Render Engine, editado con Pixelmator&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1493041485/Scene_enhanced_img8xz.png" alt="Escena de prueba"&gt;
+&lt;small&gt;Escena de prueba | Renderizado con Luxrender&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
