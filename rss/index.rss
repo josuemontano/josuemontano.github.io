@@ -1,44 +1,7 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Josue Montano's blog</title><description>Development, maths and 3D</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 25 Apr 2017 14:22:22 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Portafolio 3D</title><description>&lt;p&gt;Los trabajos siguientes fueron modelados en &lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;, el motor de renderizado utilizado se indica por separado.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
-&lt;small&gt;"Codex on the Flight of Birds" | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492610623/Final_render_t9p3zu.png" alt="Boeing 787"&gt;
-&lt;small&gt;Boeing 787 | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;video width="100%" height="450" controls autoplay&gt;  
-  &lt;source src="https://res.cloudinary.com/doonzvkyt/video/upload/v1492603549/spot_cyoxgx.mp4" type="video/mp4"&gt;
-&lt;/video&gt;  
-
-&lt;p&gt;&lt;small&gt;Spot Publicitario | Renderizado con Cycles Render Engine, editado con Final Cut Pro X &amp;amp;&lt;/small&gt;&lt;/p&gt;</description><link>http://localhost:2368/3d-portfolio/</link><guid isPermaLink="false">f5027057-58bf-4fd3-b3a9-1acadea55931</guid><category>3d rendering</category><dc:creator>Josue Montano</dc:creator><pubDate>Wed, 19 Apr 2017 11:57:00 GMT</pubDate><content:encoded>&lt;p&gt;Los trabajos siguientes fueron modelados en &lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;, el motor de renderizado utilizado se indica por separado.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492602766/0001_albok9.png" alt="Codex on the Flight of Birds"&gt;
-&lt;small&gt;"Codex on the Flight of Birds" | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492610623/Final_render_t9p3zu.png" alt="Boeing 787"&gt;
-&lt;small&gt;Boeing 787 | Renderizado con Cycles Render Engine&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;video width="100%" height="450" controls autoplay&gt;  
-  &lt;source src="https://res.cloudinary.com/doonzvkyt/video/upload/v1492603549/spot_cyoxgx.mp4" type="video/mp4"&gt;
-&lt;/video&gt;  
-
-&lt;p&gt;&lt;small&gt;Spot Publicitario | Renderizado con Cycles Render Engine, editado con Final Cut Pro X &amp;amp; Audacity&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1492603036/Polideportivo_azrzly.png" alt="Polideportivo Héroes de Octubre, La Paz"&gt;
-&lt;small&gt;Esquema del Polideportivo Héroes de Octubre, La Paz | Renderizado con Cycles Render Engine, editado con Pixelmator&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1493129981/Scene_enhanced_img8xz.png" alt="Escena de prueba"&gt;
-&lt;small&gt;Escena de prueba | Renderizado con Luxrender, &lt;br&gt;
- editado con Pixelmator&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Josue Montano's blog</title><description>Development, maths and 3D</description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Josue Montano's blog</title><link>http://localhost:2368/</link></image><generator>Ghost 2.1</generator><lastBuildDate>Thu, 20 Sep 2018 16:00:03 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Polideportivo Héroes de Octubre</title><description>Esquema del Polideportivo Héroes de Octubre, ubicado en la ciudad de La Paz, Bolivia.</description><link>http://localhost:2368/polideportivo-heroes-de-octubre/</link><guid isPermaLink="false">5ba3bd60d4175c78ccf7cfd2</guid><category>blender</category><category>3d</category><dc:creator>Josue Montano</dc:creator><pubDate>Thu, 20 Sep 2018 15:31:48 GMT</pubDate><media:content url="http://localhost:2368/content/images/2018/09/polideportivo-banner.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2018/09/polideportivo-banner.jpg" alt="Polideportivo Héroes de Octubre"&gt;&lt;p&gt;Esquema del Polideportivo Héroes de Octubre, ubicado en la ciudad de La Paz, Bolivia. Modelado con &lt;a href="https://blender.org"&gt;blender&lt;/a&gt;, renderizado con Cycles Render Engine, editado con Pixelmator.&lt;/p&gt;
+&lt;p&gt;Las texturas son de &lt;a href="https://poliigon.com"&gt;poliigon.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="plantabaja"&gt;Planta Baja&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1537458123/Polideportivo_Planta_baja_-_2018_uzq2nz.png" alt="Polideportivo Héroes de Octubre"&gt;&lt;/p&gt;
+&lt;h3 id="piso2"&gt;Piso 2&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://res.cloudinary.com/doonzvkyt/image/upload/v1537458147/Polideportivo_Piso_2_p18tdd.png" alt="Polideportivo Héroes de Octubre"&gt;&lt;/p&gt;
+</content:encoded></item></channel></rss>
