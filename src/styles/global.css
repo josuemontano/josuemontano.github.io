@@ -9,6 +9,9 @@
 :root {
     font-family: Inter, sans-serif;
 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     /* fix for Chrome */
     font-feature-settings:
         "liga" 1,
@@ -18,5 +21,55 @@
 @supports (font-variation-settings: normal) {
     :root {
         font-family: InterVariable, sans-serif;
+    }
+}
+
+h1 {
+    @apply text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl;
+}
+
+h3 {
+    @apply text-xl/8 font-semibold text-gray-900 group-hover:text-gray-600;
+
+    a {
+        @apply relative no-underline;
+
+        /* highlight background animation */
+        &::after {
+            content: "";
+            @apply absolute left-0 bottom-0 w-full h-[0.4em] bg-cyan-200 opacity-50;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+footer {
+    .social-link {
+        @apply relative text-gray-200 no-underline transition-colors duration-300;
+    }
+
+    .social-link::after {
+        @apply absolute left-0 bottom-0 w-full h-[2px] bg-cyan-400;
+
+        content: "";
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link:hover {
+        @apply text-cyan-300;
+    }
+
+    .social-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 }
