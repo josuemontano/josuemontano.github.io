@@ -1,6 +1,6 @@
 ---
 title: "Vim: Survive, thrive, and (maybe) enjoy the chaos"
-description: "I'm no Vim master, but I'll share some frustrations, a minimal setup, and five basic commands to survive—and maybe even make you enjoy the chaos."
+description: "I'm no Vim master, but I'll share some frustrations, a minimal setup, and a few basic commands to survive—and maybe even make you enjoy the chaos."
 pubDate: "Aug 14, 2025"
 ---
 
@@ -9,7 +9,7 @@ dangerously enough. Certain workflows still require editing files directly on a 
 yourself managing code on a tiny Raspberry Pi tucked in your corner.
 
 I first tried Vim at 17. I know it can be intimidating and frustrating at first, watching true masters in action was
-mind-blowing. Today, I'm still no expert, but here are five essential commands and a simple setup to keep you
+mind-blowing. Today, I'm still no expert, but here are a few essential commands and a simple setup to keep you
 productive, or at least interested.
 
 By the way, these commands also work in `vi`, which comes pre-installed on many Linux distributions.
@@ -45,7 +45,7 @@ Once you know how to open a file in Vim and exit Vim, you might feel more comfor
 ## Insert content
 
 It often happens: you open a file in Vim, start typing, and... nothing. Then, magically, some text appears. What happened?
-You pressed `i` at some point. That key puts Vim into insert mode, now you can insert text before the cursor!
+You probably pressed `i` at some point. That put Vim into insert mode, now you can insert text before the cursor!
 
 <Callout description="Activate insert mode">
 `i`
@@ -98,18 +98,19 @@ Plug 'scrooloose/nerdtree'                           " Install the NERDTree plug
 " End the vim-plug plugin block
 call plug#end()
 
-set number        " Show line numbers
-set showcmd       " Show incomplete commands in the last line of the screen as you type them
-set wildmenu      " Enable a visual command-line completion menu
-set hlsearch      " Highlight search results
-set autoindent    " Automatically indent new lines
-set nostartofline " Keep the cursor in the same column, if possible, when moving around
-set ruler         " Show cursor position (line and column) in the status line
-set expandtab     " Convert tabs into spaces
-set confirm       " Raise a dialog asking if you wish to save the current file(s), instead of failing when closing unsaved files
-set smartcase     " Makes searches case-insensitive
-set cmdheight=2   " Use 2 screen lines for the command-line, giving space for messages
-set termguicolors " Enable 24-bit RGB color in the terminal for better color schemes support
+set number           " Show line numbers
+set showcmd          " Show incomplete commands in the last line of the screen as you type them
+set wildmenu         " Enable a visual command-line completion menu
+set hlsearch         " Highlight search results
+set autoindent       " Automatically indent new lines
+set nostartofline    " Keep the cursor in the same column, if possible, when moving around
+set ruler            " Show cursor position (line and column) in the status line
+set expandtab        " Convert tabs into spaces
+set confirm          " Raise a dialog asking if you wish to save the current file(s), instead of failing when closing unsaved files
+set smartcase        " Makes searches case-insensitive
+set cmdheight=2      " Use 2 screen lines for the command-line, giving space for messages
+set termguicolors    " Enable 24-bit RGB color in the terminal for better color schemes support
+set fillchars+=eob:\ " Hide tildes beyond the end of the buffer
 
 " Enable mouse support, if possible
 if has('mouse')
@@ -122,11 +123,30 @@ colorscheme material                   " Activate the Material color scheme
 autocmd VimEnter * NERDTree | wincmd p " Open NERDTree automatically
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
+
+" Make the horizontal divider more visible
+highlight StatusLine   cterm=NONE ctermfg=black ctermbg=DarkYellow guifg=#1c272c guibg=#ffb04b
+highlight StatusLineNC cterm=NONE ctermfg=black ctermbg=Grey       guifg=#3e494f guibg=#1c272c
+
+" Configure the vertical divider
+highlight VertSplit cterm=NONE ctermfg=Yellow ctermbg=NONE guifg=#ffb04b guibg=NONE
+set fillchars+=vert:│
 ```
 
 Some of these settings really ought to be the default! Anyway, open Vim, you should see something like this:
 
 ![My Vim setup](../../assets/2025_08_14_vim_survive_thrive_and_maybe_enjoy_the_chaos_01.png)
+
+Try splitting your screen:
+
+<Callout description="Split your screen horizontally">
+`Esc` and then `:sp`
+</Callout>
+
+You can switch between editors clicking on the desired pane. You can also try resizing the panes by dragging the
+separator with your mouse.
+
+And that's it!
 
 Vim is still very much alive, and for good reasons. It's powerful, flexible and remains essential even to those who
 prefer modern IDEs, like me.
@@ -137,7 +157,7 @@ you planned...
 
 ## Face your fears!
 
-Yes, face your fears! If you run from them, they will chase you your whole life.
+If you run from them, they will chase you your whole life.
 
 Vim was one of mine. So I forced myself to use it daily by making it the default Git editor for commits. If you want to
 try the same, here's how to configure Git:
