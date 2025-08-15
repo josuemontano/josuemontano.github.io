@@ -6,8 +6,7 @@ pubDate: "Aug 14, 2025"
 
 Come on! It's 2025—are you still using Vim? Yes, I am! And you probably will too. If you haven't, you're not living
 dangerously enough. Certain workflows still require editing files directly on a remote server, or you might find
-yourself managing code on a tiny Raspberry Pi tucked in your corner. Since I often work in the terminal, I decided to
-give my Vim setup a proper spin.
+yourself managing code on a tiny Raspberry Pi tucked in your corner.
 
 I first tried Vim at 17. I know it can be intimidating and frustrating at first, watching true masters in action was
 mind-blowing. Today, I'm still no expert, but here are five essential commands and a simple setup to keep you
@@ -15,8 +14,10 @@ productive, or at least interested.
 
 ## Exit Vim
 
-This could be the most important command. Because the scariest step might be opening a file in Vim, to start with. Once
-you do, there's no clue how to close it and get back to where you were. To exit it type:
+This could be the most important command. Because the scariest step might be opening a file in Vim. Once you do, there's
+no clue how to close it and get back to where you were. You might be forced to close the terminal window, ugh!
+
+To exit Vim, type:
 
 import Callout from '../../components/Callout.astro';
 
@@ -24,7 +25,7 @@ import Callout from '../../components/Callout.astro';
 `Esc` and then `:q`
 </Callout>
 
-Yes, just type that. No need to move the cursor or do anything else. *Vim is keyboard-based*.
+Yes, just type that. There's no need to move the cursor or do anything else. *Vim is keyboard-based*.
 
 ## Force exit Vim
 
@@ -69,7 +70,7 @@ better match my workflow. To do that, we will:
 
 - add a file navigation panel
 - add syntax highlighting
-- set better defaults (better for me, at least)
+- set better defaults for my workflow
 
 We'll use [vim-plug](https://github.com/junegunn/vim-plug), a popular Vim plugin manager. Install it with:
 
@@ -121,13 +122,15 @@ Some of these settings really ought to be the default! Anyway, open Vim, you sho
 ![My Vim setup](../../assets/vim_survive_thrive_and_maybe_enjoy_the_chaos_01.png)
 
 Vim is still very much alive, and for good reasons. It's powerful, flexible and remains essential even to those who
-prefer modern IDEs. There's a huge Vim community, explore the many plugins they available. Who knows, you might find
-yourself spending far more time in Vim than you planned...
+prefer modern IDEs, like me. There's a huge Vim community, explore the many plugins they available. Who knows, you might
+find yourself spending far more time in Vim than you planned...
 
 ## Face your fears!
 
-One last tip: face your fears. If you run from them, they will chase you your whole life. I forced myself to use Vim
-daily by making it the default Git editor for commits. If you want to do the same, here's how to configure Git:
+One last tip: face your fears. If you run from them, they will chase you your whole life.
+
+I forced myself to use Vim daily by making it the default Git editor for commits. If you want to do the same, here's how
+to configure Git:
 
 ```sh
 git config --global core.editor "vim"
