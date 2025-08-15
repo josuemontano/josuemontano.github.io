@@ -3,7 +3,7 @@
 @theme {
     --font-sans: Inter, sans-serif;
     --font-display: InterDisplay, sans-serif;
-    --font-mono: JetBrains Mono, sans-serif;
+    --font-mono: JetBrains Mono, monospace;
 }
 
 :root {
@@ -28,6 +28,10 @@ h1 {
     @apply text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl;
 }
 
+h2 {
+    @apply text-3xl/8 font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl;
+}
+
 h3 {
     @apply text-xl/8 font-semibold text-gray-900 group-hover:text-gray-600;
 
@@ -48,6 +52,30 @@ h3 {
             transform: scaleX(1);
         }
     }
+}
+
+.prose {
+    font-size: 18px;
+
+    pre.astro-code {
+        @apply p-6 rounded-md font-mono;
+    }
+
+    ul {
+        margin-left: 2rem;
+
+        li {
+            list-style: disc;
+        }
+    }
+
+    a[href] {
+        @apply text-blue-500 underline;
+    }
+}
+
+.callout code {
+    font-weight: bold;
 }
 
 footer {
