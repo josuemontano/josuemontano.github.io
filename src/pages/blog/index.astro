@@ -14,22 +14,22 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
             <h1>
                 {SITE_TITLE}
             </h1>
-            <p class="mt-2 text-xl/8 text-gray-500">
+            <p class="mt-2 text-xl/7 text-gray-400">
                 {SITE_DESCRIPTION}
             </p>
             <div class="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
                 {
                     posts.map((post) => (
-                        <article class="flex max-w-xl flex-col items-start justify-between">
-                            <h3>
+                        <article class="flex max-w-xl flex-col items-start justify-between gap-2">
+                            <h3 class="font-script">
                                 <a href={`/blog/${post.id}`}>{post.data.title}</a>
                             </h3>
 
-                            <time date-time={post.data.pubDate} class="text-neutral-500 text-sm">
+                            <time date-time={post.data.pubDate} class="text-neutral-500 font-script text-sm">
                                 {dayjs(post.data.pubDate).format("MMM D, YYYY")}
                             </time>
 
-                            <p class="mt-5 line-clamp-4 text-base/6 text-neutral-600">{post.data.description}</p>
+                            <p class="mt-4 line-clamp-4 text-base/6 text-neutral-600">{post.data.description}</p>
                         </article>
                     ))
                 }
