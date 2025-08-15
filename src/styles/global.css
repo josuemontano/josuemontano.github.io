@@ -51,7 +51,7 @@ h3 {
     line-height: 28px;
 
     h2 {
-        @apply mt-12 font-script;
+        @apply mt-8 font-script;
 
         position: relative;
         display: inline-block;
