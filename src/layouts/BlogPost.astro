@@ -14,7 +14,7 @@ const { title, pubDate, updatedDate, heroImage } = Astro.props;
             {
                 updatedDate
                     ? `Last updated on ${dayjs(updatedDate).format("dd MMM, YYYY")}`
-                    : `Published on ${dayjs(pubDate).format("D MMM, YYYY")}`
+                    : `Published on ${dayjs(pubDate).format("MMM D, YYYY")}`
             }
         </div>
         {heroImage ? <Image width={1020} height={510} src={heroImage} alt="" /> : null}
