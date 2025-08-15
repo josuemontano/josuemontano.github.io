@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://josuemontano.github.io/sitemap-index.xml
