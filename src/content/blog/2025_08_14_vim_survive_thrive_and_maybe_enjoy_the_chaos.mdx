@@ -1,5 +1,5 @@
 ---
-title: "Vim: Survive, thrive, and maybe enjoy the chaos"
+title: "Vim: Survive, thrive, and (maybe) enjoy the chaos"
 description: "I'm no Vim master, but I'll share some frustrations, a minimal setup, and five basic commands to survive—and maybe even make you enjoy the chaos."
 pubDate: "Aug 14, 2025"
 ---
@@ -50,6 +50,8 @@ You pressed `i` at some point. That key puts Vim into insert mode, now you can i
 `i`
 </Callout>
 
+Press `Esc` to leave insert mode.
+
 ## Save changes
 
 <Callout description="Save changes">
@@ -74,7 +76,7 @@ better match my workflow. To do that, we will:
 
 - add a file navigation panel
 - add syntax highlighting
-- set better defaults for my workflow
+- set better defaults
 
 We'll use [vim-plug](https://github.com/junegunn/vim-plug), a popular Vim plugin manager. Install it with:
 
@@ -82,7 +84,7 @@ We'll use [vim-plug](https://github.com/junegunn/vim-plug), a popular Vim plugin
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Then copy this Vim configuration to the `~/.vimrc` file.
+Then, add the following to your `~/.vimrc` file to update your Vim configuration.
 
 ```viml
 " Start the vim-plug plugin manager.
@@ -128,16 +130,16 @@ Some of these settings really ought to be the default! Anyway, open Vim, you sho
 Vim is still very much alive, and for good reasons. It's powerful, flexible and remains essential even to those who
 prefer modern IDEs, like me.
 
-There's a huge Vim community, explore the many plugins available. For example, there's an official [Github Copilot
-plugin](https://github.com/github/copilot.vim). Who knows, you might find yourself spending far more time in Vim
-than you planned...
+There's a huge Vim community, explore the many plugins available, like the official [Github Copilot
+plugin](https://github.com/github/copilot.vim). Who knows, you might find yourself spending far more time in Vim than
+you planned...
 
 ## Face your fears!
 
-One last tip: face your fears. If you run from them, they will chase you your whole life.
+Yes, face your fears! If you run from them, they will chase you your whole life.
 
-I forced myself to use Vim daily by making it the default Git editor for commits. If you want to do the same, here's how
-to configure Git:
+Vim was one of mine. So I forced myself to use Vim daily by making it the default Git editor for commits. If you want to
+try the same, here's how to configure Git:
 
 ```sh
 git config --global core.editor "vim"
