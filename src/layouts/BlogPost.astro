@@ -10,18 +10,16 @@ const { title, pubDate, updatedDate, heroImage } = Astro.props;
 
 <main>
     <article class="space-y-8">
+        <div class="text-right text-neutral-400">
+            {
+                updatedDate
+                    ? `Last updated on ${dayjs(updatedDate).format("dd MMM, YYYY")}`
+                    : `Published on ${dayjs(pubDate).format("D MMM, YYYY")}`
+            }
+        </div>
         {heroImage ? <Image width={1020} height={510} src={heroImage} alt="" /> : null}
-        <header class="title">
-            <div class="text-neutral-400">
-                {
-                    updatedDate
-                        ? `Last updated on ${dayjs(updatedDate).format("dd MMM, YYYY")}`
-                        : `Published on ${dayjs(pubDate).format("D MMM, YYYY")}`
-                }
-            </div>
-            <h1 class="mb-4">{title}</h1>
-        </header>
 
+        <h1 class="mb-12">{title}</h1>
         <div class="prose space-y-6">
             <slot />
         </div>
