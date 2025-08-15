@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: Inter Variable, sans-serif;
+    --font-sans: Albert Sans Variable, sans-serif;
     --font-mono: JetBrains Mono Variable, monospace;
     --font-script: Fira Sans, sans-serif;
 }
@@ -47,8 +47,8 @@ h3 {
 }
 
 .prose {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 34px;
 
     h2 {
         @apply mt-8 font-script;
@@ -67,7 +67,7 @@ h3 {
     }
 
     pre.astro-code {
-        @apply p-6 rounded-md font-mono;
+        @apply p-6 rounded-md font-mono text-xl;
     }
 
     ul {

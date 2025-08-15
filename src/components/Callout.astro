@@ -6,9 +6,9 @@ type Props = {
 const { description } = Astro.props;
 ---
 
-<div class="text-amber-900 callout">
-    <div class={description ? "rounded-t-md bg-amber-100 p-4" : "bg-amber-100 p-4 rounded-md"}>
+<div class="text-lime-900 callout">
+    <div class={description ? "rounded-t-md bg-lime-200/30 p-4" : "bg-lime-200/30 p-4 rounded-md"}>
         <slot />
     </div>
-    {description ? <div class="bg-amber-200/10 text-xs p-2 text-amber-900 rounded-b-md">{description}</div> : null}
+    {description ? <div class="bg-lime-100 text-xs p-2 text-lime-900 rounded-b-md">{description}</div> : null}
 </div>
