@@ -4,13 +4,9 @@ description: "Don't overengineer infrastructure. I run an app with over 30,000 M
 pubDate: "Aug 21, 2025"
 ---
 
-Many startups pour massive amounts of money into building highly resilient infrastructure from day one. A DevOps
-engineer spends weeks writing Terraform or Helm code that no one else fully understands—or dares to touch. By the time
-the production environment is up, it still lacks observability, environments, etc. Meanwhile, the startup has already
-spent thousands before the engineering team can even start shipping features.
-
-I find it funny how so much energy is often poured into infrastructure, yet code quality often gets neglected. My take
-on infrastructure: start lean, measure usage, then upgrade only when data shows a bigger setup is required.
+Many startups pour massive amounts of money into building highly resilient infrastructure from day one. I find it funny
+how so much energy is often poured into infrastructure, yet code quality often gets neglected. My take on
+infrastructure: start lean, measure usage, then upgrade only when data shows a bigger setup is required.
 
 For the past 8 years, I've been running a volunteer shifts app with over 30,000 MAU on a single shared vCPU instance
 costing just $24 a month. It runs every service the app needs, except email, and requires very little maintenance.
@@ -59,48 +55,6 @@ Check the [Dokku ACL plugin](https://github.com/dokku-community/dokku-acl) if yo
 permissions. On the other hand, the postgres and redis plugins allow you to schedule encrypted backups to S3.
 
 Over the years, Dokku has introduced very few breaking changes, which makes maintaining it effortless.
-
-## CI/CD
-
-[GitHub Actions](https://github.com/features/actions) is an amazing platform for automating deployments, there's really
-no excuse not to use it.
-
-First, create an SSH key for automated deployments, add it to Dokku, and store the private key along with any other
-necessary values as environment variables in your GitHub repository.
-
-Once that's done, this GitHub Actions workflow file will handle deploying the app automatically on marging a pull
-request to the `main` branch.
-
-```yml
-name: Deploy to Dokku
-
-on:
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.8.1
-        with:
-          ssh-private-key: ${{ secrets.DOKKU_DEPLOY_KEY }}
-
-      - name: Add server to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.DOKKU_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy to Dokku
-        run: |
-          git remote add production dokku@${{ secrets.DOKKU_HOST }}:${{ secrets.DOKKU_APP }} || true
-          git push production HEAD:refs/heads/main -f
-```
 
 ## A stress test
 
