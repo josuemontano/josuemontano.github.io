@@ -81,9 +81,12 @@ import AsciinemaPlayer from '../../components/AsciinemaPlayer.astro';
 ## Next steps
 
 Yes, there's more work involved when configuring the server for the first time. You'll want to disable root password
-login, enforce SSH key access for all users, configure the firewall, tweak PostgreSQL and so on. And you should
-definitely proxy the app behind [Cloudflare](https://cloudflare.com/). We also haven't discussed provisioning new
-servers for test environments, or setting [OpenTelemetry](https://opentelemetry.io) up for observability.
+login, enforce SSH key access for all users, configure the firewall, and so on.
+
+Also consider to:
+- Proxy the app behind [Cloudflare](https://cloudflare.com/)
+- Create a CI/CD workflow to deploy on merging pull requests
+- Set [OpenTelemetry](https://opentelemetry.io) up for observability
 
 Still, you can have a solid environment up and running in half a day — it usually takes me less than 2 hours to set up a
 new server and deploy an app to production using this workflow.
