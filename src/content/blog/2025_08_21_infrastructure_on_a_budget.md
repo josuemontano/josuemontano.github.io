@@ -104,11 +104,11 @@ jobs:
 
 ## A stress test
 
-To evaluate the app's performance under load, I ran a stress test on one of its REST endpoints using a sample of ~8,000
-requests. Each request cycle involves authenticating the current user, executing multiple queries against the PostgreSQL
-database, and serializing roughly 20KB of data.
+To evaluate the app's performance under load, I ran a stress test on one of its REST endpoints. Each request cycle
+involves authenticating the current user, executing multiple queries against the PostgreSQL database, and serializing
+roughly 20KB of data.
 
-The following table shows the response times in milliseconds:
+The following table shows the response times in milliseconds of a sample of ~8,000 requests:
 
 | req/sec | p50     | p90     | max     |
 | ------- | ------- | ------- | ------- |
@@ -116,8 +116,8 @@ The following table shows the response times in milliseconds:
 | 100     | 869.33  | 1587.8  | 3562.0  |
 | 200     | 1983.95 | 3258.23 | 8347.38 |
 
-It's worth noting that the PostgreSQL database is small — around 200 MB. But that's exactly the data that matters for
-the app and our users.
+It's worth noting that the PostgreSQL database is small — every year we add about 100 MB of data. But that's exactly the
+data that matters for the app and our users.
 
 ## Next steps
 
