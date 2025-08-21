@@ -4,11 +4,10 @@ description: "Don't overengineer infrastructure. I run an app with over 30,000 M
 pubDate: "Aug 21, 2025"
 ---
 
-Many startups pour massive amounts of money into building highly resilient infrastructure from day one. Among the first
-hires, is a DevOps engineer who spends weeks writing Terraform or Helm code that no one else fully understands—or dares
-to touch. A few more weeks go by deploying everything to AWS, and by the time the environment is up, it still lacks
-observability, environments, etc. Meanwhile, the startup has already spent thousands before the engineering team can
-even start shipping features.
+Many startups pour massive amounts of money into building highly resilient infrastructure from day one. A DevOps
+engineer spends weeks writing Terraform or Helm code that no one else fully understands—or dares to touch. By the time
+the production environment is up, it still lacks observability, environments, etc. Meanwhile, the startup has already
+spent thousands before the engineering team can even start shipping features.
 
 I find it funny how so much energy is often poured into infrastructure, yet code quality often gets neglected. My take
 on infrastructure: start lean, measure usage, then upgrade only when data shows a bigger setup is required.
@@ -133,9 +132,9 @@ new server and deploy an app to production using this workflow.
 ## Final thoughts
 
 Can you really rely on a single server? I've done it for the past few years, and I think you might be able to get away
-with it for a while, too. More often than not, it's GDPR, not traffic, that forces to deploy a second server. make sure
-your setup can be easily reproduced. This deployment process is Docker-based, giving us the
-flexibility to migrate to k8s when (and if) needed.
+with it for a while, too. More often than not, it's GDPR, not traffic, that forces to deploy a second server. Therefore,
+make sure your setup can be easily reproduced. A Docker-based workflow will give you the flexibility to migrate to k8s
+when (and if) needed.
 
 > Good architecture lets you defer decisions for as long as possible
 
