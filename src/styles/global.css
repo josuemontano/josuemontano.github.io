@@ -47,8 +47,8 @@ h3 {
 }
 
 .prose {
-    font-size: 22px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 32px;
 
     h2 {
         @apply mt-8 font-script;
@@ -71,7 +71,7 @@ h3 {
     }
 
     pre.astro-code {
-        @apply p-6 rounded-md font-mono text-xl;
+        @apply p-6 rounded-md font-mono text-lg;
     }
 
     ul {
