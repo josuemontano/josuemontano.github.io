@@ -1,0 +1,60 @@
+---
+interface Props {
+    src: string;
+    cols?: number;
+    rows?: number;
+    autoPlay?: boolean;
+    preload?: boolean;
+    loop?: boolean;
+    speed?: number;
+    description?: string;
+}
+
+const {
+    src,
+    cols = 140,
+    rows = 35,
+    autoPlay = true,
+    preload = true,
+    loop = true,
+    speed = 1,
+    description,
+} = Astro.props;
+---
+
+<div
+    id="asciinema-player"
+    data-src={src}
+    data-cols={cols}
+    data-rows={rows}
+    data-autoplay={autoPlay}
+    data-preload={preload}
+    data-loop={loop}
+    data-speed={speed}
+>
+</div>
+{description ? <p class="text-sm text-gray-600 text-center">{description}</p> : null}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3.10.0/dist/bundle/asciinema-player.css" />
+<script src="/public/js/asciinema-player.min.js" client:load></script>
+
+<script>
+    const container = document.getElementById("asciinema-player");
+    if (container) {
+        const props = {
+            src: container.dataset.src,
+            cols: Number(container.dataset.cols),
+            rows: Number(container.dataset.rows),
+            autoPlay: container.dataset.autoplay === "true",
+            preload: container.dataset.preload === "true",
+            loop: container.dataset.loop === "true",
+            speed: Number(container.dataset.speed),
+        };
+
+        AsciinemaPlayer.create(props.src, container, {
+            theme: "dracula",
+            controls: false,
+            ...props,
+        });
+    }
+</script>
