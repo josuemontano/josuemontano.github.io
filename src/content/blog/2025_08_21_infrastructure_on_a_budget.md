@@ -54,10 +54,10 @@ The solution? [Dokku](https://dokku.com), an open-source alternative to Heroku. 
 - You can deploy any `Dockerfile`
 
 [Here](https://gist.github.com/josuemontano/56ec527722a77c87c004476cff3302cc) you'll find the gist of the setup required
-for this server. Check the [dokku ACL plugin](https://github.com/dokku-community/dokku-acl) if you need to manage users
-and their permissions. On the other hand, the postgres and redis plugins allow you to schedule encrypted backups to S3.
+for this server. Add a remote to your git repo and you are ready to deploy with just `git push`!
 
-Add a remote to your git repo and you are ready to deploy with just `git push`!
+Check the [dokku ACL plugin](https://github.com/dokku-community/dokku-acl) if you need to manage users and their
+permissions. On the other hand, the postgres and redis plugins allow you to schedule encrypted backups to S3.
 
 Over the years, Dokku has introduced very few breaking changes, which makes maintaining it effortless.
 
@@ -69,14 +69,14 @@ no excuse not to use it.
 First, create an SSH key for automated deployments, add it to Dokku, and store the private key along with any other
 necessary values as environment variables in your GitHub repository.
 
-Once that's done, this GitHub Actions workflow file will handle deploying the app automatically, taking all the manual
-steps off your plate.
+Once that's done, this GitHub Actions workflow file will handle deploying the app automatically on marging a pull
+request to the `main` branch.
 
 ```yml
 name: Deploy to Dokku
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
