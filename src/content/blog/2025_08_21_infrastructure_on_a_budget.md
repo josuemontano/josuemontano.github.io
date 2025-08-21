@@ -1,5 +1,5 @@
 ---
-title: "Infrastructure on a budget: A case study"
+title: "Infrastructure on a budget"
 description: "Don't overengineer infrastructure. I run an app with over 30,000 MAU on a single shared vCPU server costing $24 a month. Simple, lean setups handle real traffic."
 pubDate: "Aug 21, 2025"
 ---
