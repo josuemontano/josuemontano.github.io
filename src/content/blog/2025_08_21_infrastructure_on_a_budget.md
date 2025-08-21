@@ -7,29 +7,24 @@ pubDate: "Aug 21, 2025"
 Many startups pour massive amounts of money into building highly resilient infrastructure from day one. Among the first
 hires, is a DevOps engineer who spends weeks writing Terraform or Helm code that no one else fully understands—or dares
 to touch. A few more weeks go by deploying everything to AWS, and by the time the environment is up, it still lacks
-observability, environments, etc. Meanwhile, the startup has already spent tens of thousands before the engineering team
-can even start shipping features.
+observability, environments, etc. Meanwhile, the startup has already spent thousands before the engineering team can
+even start shipping features.
 
 I find it funny how so much energy is often poured into infrastructure, yet code quality often gets neglected. My take
-on infrastructure: keep it simple until it's truly necessary.
+on infrastructure: start lean, measure usage, then upgrade only when data shows a bigger setup is required.
 
 For the past 8 years, I've been running a volunteer shifts app with over 30,000 MAU on a single shared vCPU instance
 costing just $24 a month. It runs every service the app needs, except email, and requires very little maintenance.
-Despite its simplicity, it can easily handle 50 requests per second.
+Despite its simplicity, it can handle around 50 requests _per second_.
 
 ## The app
 
 The app itself is built with Python, using [FastAPI](https://fastapi.tiangolo.com) at its core. It exposes a REST API,
-connects to a PostgreSQL database, caches data in Redis, and runs background jobs with [Huey](https://github.com/coleifer/huey).
+connects to a PostgreSQL database, caches data in Redis, and runs background jobs with
+[Huey](https://github.com/coleifer/huey). The same Python app serves a React app.
 
-The same Python app serves the frontend, a React app.
-
-[Gunicorn](https://gunicorn.org) is the HTTP server, with [uvicorn workers](https://www.uvicorn.org/deployment/#gunicorn).
-Only 6 gunicorn workers handle all the traffic.
-
-```bash
-gunicorn -n gizmo_app -w 6 -k uvicorn.workers.UvicornWorker api.main:app --forwarded-allow-ips='*' --capture-output
-```
+[Gunicorn](https://gunicorn.org) is the HTTP server, with [uvicorn workers](https://www.uvicorn.org/deployment/#gunicorn),
+6 of them handle all the traffic.
 
 ## The virtual machine
 
@@ -37,15 +32,13 @@ Over the years, I experimented with different providers and eventually settled o
 surprise, it proved far more reliable than [DigitalOcean](https://www.digitalocean.com), consistently keeping its 100% SLA.
 
 I deployed what Vultr calls a High Performance Cloud Compute instance: 2 shared AMD EPYC vCPUs, 4 GB of memory, and 100
-GB of storage.
-
-These statis provide an overview of the machine's usage:
+GB of storage. Here's an overview of the machine's usage:
 
 ![VPS Stats](../../assets/2025_08_21_infrastructure_on_a_budget_vps_stats.png)
 
-Python apps can be more memory-intensive than CPU-intensive.
+The usual load is 30 requests a minute. Python apps can be more memory-intensive than CPU-intensive.
 
-## A PaaS to deploy and manage the app
+## The PaaS
 
 I've always loved the simplicity of [Heroku](https://www.heroku.com). It lets you forget about infrastructure almost
 entirely. Unfortunately, for this project, Heroku was far too expensive. We were working with a very limited budget,
@@ -65,6 +58,8 @@ for this server. Check the [dokku ACL plugin](https://github.com/dokku-community
 and their permissions. On the other hand, the postgres and redis plugins allow you to schedule encrypted backups to S3.
 
 Add a remote to your git repo and you are ready to deploy with just `git push`!
+
+Over the years, Dokku has introduced very few breaking changes, which makes maintaining it effortless.
 
 ## CI/CD
 
@@ -110,7 +105,7 @@ jobs:
 
 ## A stress test
 
-To evaluate the app's performance under load, we ran a stress test on one of its REST endpoints using a sample of ~6,000
+To evaluate the app's performance under load, I ran a stress test on one of its REST endpoints using a sample of ~8,000
 requests. Each request cycle involves authenticating the current user, executing multiple queries against the PostgreSQL
 database, and serializing roughly 20KB of data.
 
@@ -122,27 +117,27 @@ The following table shows the response times in milliseconds:
 | 100     | 869.33  | 1587.8  | 3562.0  |
 | 200     | 1983.95 | 3258.23 | 8347.38 |
 
-It's worth noting that the PostgreSQL database is small — around 150 MB, containing roughly 1 million records. But
-that's exactly the data that matters for the app and our users. I delete old data frequently. Your database might be
-even smaller at the start, unless you're working in the big data business, of course.
+It's worth noting that the PostgreSQL database is small — around 200 MB, its largest table contains about 1 million
+records. But that's exactly the data that matters for the app and our users.
 
 ## Next steps
 
-Yes, there's a bit more work involved when configuring the server for the first time. You'll want to disable root
-password login, enforce SSH key access for all users, configure the firewall, and so on. And you should definitely proxy
-the app behind [Cloudflare](https://cloudflare.com/). We also haven't discussed provisioning new servers for test
-environments. Or setting [OpenTelemetry](https://opentelemetry.io) up for better observability.
+Yes, there's more work involved when configuring the server for the first time. You'll want to disable root password
+login, enforce SSH key access for all users, configure the firewall, tweak PostgreSQL and so on. And you should
+definitely proxy the app behind [Cloudflare](https://cloudflare.com/). We also haven't discussed provisioning new
+servers for test environments. Or setting [OpenTelemetry](https://opentelemetry.io) up for better observability.
 
 Still, you can have a solid environment up and running in half a day — it usually takes me less than 2 hours to set up a
-server and deploy an app to production using this workflow.
+new server and deploy an app to production using this workflow.
 
-## Lessons learned
+## Final thoughts
 
 Can you really rely on a single server? I've done it for the past few years, and I think you might be able to get away
-with it for a bit. I've seen successful startups running costly k8s clusters on AWS with only 2 nodes.
+with it for a while, too. More often than not, it's GDPR, not traffic, that forces to deploy a second server. make sure
+your setup can be easily reproduced. This deployment process is Docker-based, giving us the
+flexibility to migrate to k8s when (and if) needed.
 
-Should you deploy your app and all its services on a shared vCPU machine? Probably not. Still, this case study
-demonstrates just how much you can accomplish with minimal resources.
+> Good architecture lets you defer decisions for as long as possible
 
-What if I later need to move to a k8s cluster? The deployment process for my app is Docker-based, so I'm not locked in.
-Remember — good architecture lets you defer decisions for as long as possible!
+Should you deploy your app and all its services on a shared vCPU machine? Probably not. Still, I hope this demonstrates
+just how much you can accomplish with minimal resources.
