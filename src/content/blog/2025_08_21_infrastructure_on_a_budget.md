@@ -35,7 +35,7 @@ GB of storage. Here's an overview of the machine's usage:
 
 ![VPS Stats](../../assets/2025_08_21_infrastructure_on_a_budget_vps_stats.png)
 
-The usual load is 30 requests a minute. This kind of Python apps can be more memory-intensive than CPU-intensive.
+The usual load is 30 requests a minute. Python apps of this kind can be more memory-intensive than CPU-intensive.
 
 ## The PaaS
 
