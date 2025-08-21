@@ -119,6 +119,11 @@ The following table shows the response times in milliseconds of a sample of ~8,0
 It's worth noting that the PostgreSQL database is small — every year we add about 100 MB of data. But that's exactly the
 data that matters for the app and our users.
 
+import AsciinemaPlayer from '../../components/AsciinemaPlayer.astro';
+
+<AsciinemaPlayer src='/public/casts/2025_08_21_infrastructure_on_a_budget_vps_100.cast' cols={138} rows={26} speed={2} description="Load on the server while serving 100 requests per second"/>
+
+
 ## Next steps
 
 Yes, there's more work involved when configuring the server for the first time. You'll want to disable root password
