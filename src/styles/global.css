@@ -103,6 +103,24 @@ h3 {
             }
         }
     }
+
+    blockquote {
+        @apply text-xl font-script text-gray-700 p-4 text-center;
+
+        &:before {
+            content: "";
+            width: 200px;
+            height: 20px;
+            @apply border-t-2 border-t-cyan-500 block mx-auto;
+        }
+
+        &:after {
+            content: "";
+            width: 200px;
+            height: 20px;
+            @apply border-b-2 border-b-cyan-500 block mx-auto;
+        }
+    }
 }
 
 .callout code {
