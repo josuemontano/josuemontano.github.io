@@ -35,7 +35,7 @@ GB of storage. Here's an overview of the machine's usage:
 
 ![VPS Stats](../../assets/2025_08_21_infrastructure_on_a_budget_vps_stats.png)
 
-The usual load is 30 requests a minute. Python apps can be more memory-intensive than CPU-intensive.
+The usual load is 30 requests a minute. This kind of Python apps can be more memory-intensive than CPU-intensive.
 
 ## The PaaS
 
@@ -55,7 +55,7 @@ The solution? [Dokku](https://dokku.com), an open-source alternative to Heroku. 
 [Here](https://gist.github.com/josuemontano/56ec527722a77c87c004476cff3302cc) you'll find the gist of the setup required
 for this server. Add a remote to your git repo and you are ready to deploy with just `git push`!
 
-Check the [dokku ACL plugin](https://github.com/dokku-community/dokku-acl) if you need to manage users and their
+Check the [Dokku ACL plugin](https://github.com/dokku-community/dokku-acl) if you need to manage users and their
 permissions. On the other hand, the postgres and redis plugins allow you to schedule encrypted backups to S3.
 
 Over the years, Dokku has introduced very few breaking changes, which makes maintaining it effortless.
@@ -116,15 +116,15 @@ The following table shows the response times in milliseconds:
 | 100     | 869.33  | 1587.8  | 3562.0  |
 | 200     | 1983.95 | 3258.23 | 8347.38 |
 
-It's worth noting that the PostgreSQL database is small — around 200 MB, its largest table contains about 1 million
-records. But that's exactly the data that matters for the app and our users.
+It's worth noting that the PostgreSQL database is small — around 200 MB. But that's exactly the data that matters for
+the app and our users.
 
 ## Next steps
 
 Yes, there's more work involved when configuring the server for the first time. You'll want to disable root password
 login, enforce SSH key access for all users, configure the firewall, tweak PostgreSQL and so on. And you should
 definitely proxy the app behind [Cloudflare](https://cloudflare.com/). We also haven't discussed provisioning new
-servers for test environments. Or setting [OpenTelemetry](https://opentelemetry.io) up for better observability.
+servers for test environments, or setting [OpenTelemetry](https://opentelemetry.io) up for observability.
 
 Still, you can have a solid environment up and running in half a day — it usually takes me less than 2 hours to set up a
 new server and deploy an app to production using this workflow.
@@ -134,9 +134,9 @@ new server and deploy an app to production using this workflow.
 Can you really rely on a single server? I've done it for the past few years, and I think you might be able to get away
 with it for a while, too. More often than not, it's GDPR, not traffic, that forces to deploy a second server. Therefore,
 make sure your setup can be easily reproduced. A Docker-based workflow will give you the flexibility to migrate to k8s
-when (and if) needed.
+when —and if— needed.
 
 > Good architecture lets you defer decisions for as long as possible
 
-Should you deploy your app and all its services on a shared vCPU machine? Probably not. Still, I hope this demonstrates
+Should you deploy your app and all its services on a single shared vCPU machine? Probably not. Still, I hope this demonstrates
 just how much you can accomplish with minimal resources.
