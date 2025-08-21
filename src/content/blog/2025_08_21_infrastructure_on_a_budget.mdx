@@ -75,7 +75,7 @@ data that matters for the app and our users.
 
 import AsciinemaPlayer from '../../components/AsciinemaPlayer.astro';
 
-<AsciinemaPlayer src='/casts/2025_08_21_infrastructure_on_a_budget_vps_100.cast' cols={138} rows={26} speed={2} description="Load on the server while serving 100 requests per second"/>
+<AsciinemaPlayer src='/casts/2025_08_21_infrastructure_on_a_budget_vps_100.cast' cols={138} rows={26} speed={2} description="Load on the server at 100 requests/sec throughput"/>
 
 
 ## Next steps
@@ -83,10 +83,10 @@ import AsciinemaPlayer from '../../components/AsciinemaPlayer.astro';
 Yes, there's more work involved when configuring the server for the first time. You'll want to disable root password
 login, enforce SSH key access for all users, configure the firewall, and so on.
 
-Also consider to:
+You may also want to:
 - Proxy the app behind [Cloudflare](https://cloudflare.com/)
-- Create a CI/CD workflow to deploy on merging pull requests
-- Set [OpenTelemetry](https://opentelemetry.io) up for observability
+- Set up a CI/CD workflow to deploy on pull request merges
+- Add [OpenTelemetry](https://opentelemetry.io) for observability
 
 Still, you can have a solid environment up and running in half a day — it usually takes me less than 2 hours to set up a
 new server and deploy an app to production using this workflow.
@@ -100,5 +100,5 @@ when —and if— needed.
 
 > Good architecture lets you defer decisions for as long as possible
 
-Should you deploy your app and all its services on a single shared vCPU machine? Probably not. Still, I hope this demonstrates
-just how much you can accomplish with minimal resources.
+Should you deploy your app and all its services on a single shared vCPU machine? Probably not. Still, I hope this
+demonstrates just how much you can accomplish with minimal resources.
