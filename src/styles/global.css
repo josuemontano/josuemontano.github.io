@@ -66,6 +66,10 @@ h3 {
         background-position: 0 95%;
     }
 
+    h3 {
+        @apply text-2xl/7 mt-8 font-script;
+    }
+
     pre.astro-code {
         @apply p-6 rounded-md font-mono text-xl;
     }
@@ -80,6 +84,24 @@ h3 {
 
     a[href] {
         @apply text-blue-500 underline;
+    }
+
+    table {
+        @apply relative min-w-full divide-y divide-gray-300;
+
+        thead {
+            th {
+                @apply px-3 py-3.5 text-left text-lg font-semibold text-gray-900;
+            }
+        }
+
+        tbody {
+            @apply divide-y divide-gray-200;
+
+            td {
+                @apply px-3 py-4 text-lg whitespace-nowrap text-gray-500;
+            }
+        }
     }
 }
 
