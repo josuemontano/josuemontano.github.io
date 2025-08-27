@@ -4,15 +4,15 @@ description: "I'm no Vim master, but I'll share some frustrations, a minimal set
 pubDate: "Aug 14, 2025"
 ---
 
-Come on! It's 2025—are you still using [Vim](https://www.vim.org)? Yes, I am! And you probably will too. If you haven't, you're not living
-dangerously enough. Certain workflows still require editing files directly on a remote server, or you might find
-yourself managing code on a tiny Raspberry Pi tucked in your corner.
+It's 2025, and I'm still using [Vim](https://www.vim.org)! How about you? If you haven't tried it yet, you're not living
+dangerously enough. Some workflows still call for editing files directly on a remote server or container, or you might
+find yourself managing code on a tiny Raspberry Pi tucked in your corner. And that's when Vim might come in handy.
 
-I first tried Vim at 17. I know it can be intimidating and frustrating at first, watching true masters in action was
+I first tried it at 17. I know it can be intimidating and frustrating at first, watching true masters in action was
 mind-blowing. Today, I'm still no expert, but here are a few essential commands and a simple setup to keep you
 productive, or at least interested.
 
-By the way, these commands also work in `vi`, which comes pre-installed on many Linux distributions.
+By the way, these commands also work in `vi`, which comes pre-installed on many Linux distros.
 
 ## Exit Vim
 
@@ -71,8 +71,13 @@ Wanna save your changes and exit Vim as fast as possible?
 `Esc` and then `/` followed by the search term
 </Callout>
 
-For example, to search for the string "_cache", type `/_cache` and press `Enter`. Press `n` to jump to the next
-occurrence. By default, _searches are case sensitive_.
+For example, to search for the string "_cache", type `/_cache` and press `Enter`.
+
+<Callout description="Jump to the next occurrence">
+`n`
+</Callout>
+
+By default, _searches are case sensitive_.
 
 Congratulations! You survived Vim and lived a little dangerously. I managed for years with just these commands. After a
 while, Vim can get addictive. It's amazing what you can do once you get the hang of it.
@@ -88,7 +93,7 @@ Let's:
 - add syntax highlighting
 - set better defaults
 
-We'll use [vim-plug](https://github.com/junegunn/vim-plug), a popular Vim plugin manager. Install it with:
+There are a few plugin managers for Vim. We'll use [vim-plug](https://github.com/junegunn/vim-plug). Install it with:
 
 ```sh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -161,8 +166,8 @@ To close each pane, use our beloved `:q` command.
 
 ## Explore
 
-Vim is still very much alive, and for good reasons. It's powerful, flexible and remains essential even to those who
-prefer modern IDEs, like me.
+Although nearly as old as I am, Vim is still very much alive, and for good reasons. It's powerful, flexible and remains
+essential even to those who prefer modern IDEs, like me.
 
 There's a huge Vim community, explore the many plugins available, like the official [Github Copilot
 plugin](https://github.com/github/copilot.vim). Who knows, you might find yourself spending far more time in Vim than
