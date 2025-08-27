@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import dayjs from "dayjs";
-import Utterances from "../components/Utterances.astro";
+
+import Comments from "../components/Comments.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -26,5 +27,5 @@ const { title, pubDate, updatedDate, heroImage } = Astro.props;
         </div>
     </article>
 
-    <Utterances repo="josuemontano/josuemontano.github.io" />
+    <Comments />
 </main>
