@@ -1,0 +1,19 @@
+---
+interface Props {
+    repo: string;
+    issueTerm?: string;
+    theme?: "github-dark" | "github-light" | "preferred-color-scheme";
+}
+
+const { repo, issueTerm = "pathname", theme = "preferred-color-scheme" } = Astro.props;
+---
+
+<section class="mt-2">
+    <script
+        src="https://utteranc.es/client.js"
+        repo={repo}
+        issue-term={issueTerm}
+        theme={theme}
+        crossOrigin="anonymous"
+        async></script>
+</section>
