@@ -121,6 +121,10 @@ h3 {
             @apply border-b-2 border-b-cyan-500 block mx-auto;
         }
     }
+
+    hr {
+        @apply border-gray-200;
+    }
 }
 
 .callout code {
